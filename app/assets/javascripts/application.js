@@ -16,10 +16,4 @@
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
-
-$(function() {
-   $('#flash').delay(500).fadeIn('normal', function() {
-      $(this).delay(200).fadeOut();
-      
-   });
-});
+//= require warnings
