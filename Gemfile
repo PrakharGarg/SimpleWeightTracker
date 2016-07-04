@@ -29,6 +29,9 @@ gem 'bootstrap-sass'
 
 gem "chartkick"
 
+gem 'pry'
+
+gem 'pry-byebug'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -3,10 +3,11 @@
 </div>
 
 <div id = "update">
-  <%= form_tag("/weights", method: "get") do %>
+  <%= form_tag("/weights", method: "post") do %>
     <%= label_tag(:new_weight, "Enter Weight") %>
     <br />
     <%= text_field_tag(:new_weight) %>
+    <%= hidden_field_tag 'user_id', current_user.id %>
     <%= submit_tag("Enter") %>
   <% end %>
 </div>
