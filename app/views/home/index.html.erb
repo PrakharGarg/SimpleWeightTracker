@@ -1,8 +1,7 @@
 <div id = "graph">
-  
-  <%= @array %>
-  <% binding.pry %>
-   <%= line_chart (Weight.where(user_id: current_user.id)).group_by_day(:created_at).maximum(:weight) %>
+  <%= User.count %>
+   <%= area_chart Weight.group_by_day(:created_at).count %>
+   <%= line_chart User.group_by_day(:created_at).count %>
 </div>
 
 <div id = "update">
