@@ -1,6 +1,5 @@
 <div class = "body-graph">
   <div id = "graph">
-    <%= User.count %>
      <%= line_chart (Weight.where(user_id: current_user.id)).group_by_day(:created_at).minimum(:weight) %>
   </div>
   <br />
