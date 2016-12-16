@@ -3,14 +3,15 @@
     <%= User.count %>
      <%= line_chart (Weight.where(user_id: current_user.id)).group_by_day(:created_at).minimum(:weight) %>
   </div>
-
+  <br />
+  <br />
   <div id = "update">
     <%= form_tag("/weights", method: "post") do %>
       <%= label_tag(:new_weight, "Enter Weight") %>
       <br />
       <%= text_field_tag(:new_weight) %>
       <%= hidden_field_tag 'user_id', current_user.id %>
-      <%= submit_tag("Enter") %>
+      <%= submit_tag("Enter", :style => "background-color:#3498DB; color:white;")%>
     <% end %>
   </div>
 </div>
