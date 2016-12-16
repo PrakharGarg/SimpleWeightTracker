@@ -13,7 +13,7 @@ class WeightsController < ApplicationController
     if @weight.save
       latest_weight_array = Weight.where("user_id = #{current_user.id}")
       latest_weight = latest_weight_array.order("created_at")[-2]
-      if latest_weight.created_at >= Time.zone.now.beginning_of_day
+      if latest_weight != nil && latest_weight.created_at >= Time.zone.now.beginning_of_day
         latest_weight.destroy
       end
       redirect_to root_path
